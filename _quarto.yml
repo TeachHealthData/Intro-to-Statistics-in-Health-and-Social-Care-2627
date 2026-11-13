@@ -62,42 +62,18 @@ website:
         text: Course home
       - href: course-guide.qmd
         text: How to use this site
-      - section: "Semester 1 · How do we analyse data?"
+      - section: "Introduction to Statistics in Health and Social Care"
         contents:
-          - href: S1_T01_DescribingData/index.qmd
+          - href: Week_1/index.qmd
             text: "01 · Describing data"
-          - href: S1_T02_SignalVsNoise/index.qmd
+          - href: Week_2/index.qmd
             text: "02 · Signal vs the noise"
-          - href: S1_T03_ComparingGroups/index.qmd
+          - href: Week_3/index.qmd
             text: "03 · Comparing groups"
-          - href: S1_T04_CorrelationCausation/index.qmd
+          - href: Week_4/index.qmd
             text: "04 · Correlation and causation"
-          - href: S1_T05_MeasureRisk/index.qmd
+          - href: Week_5/index.qmd
             text: "05 · Measuring risk"
-          - href: S1_T06_Regression/index.qmd
-            text: "06 · Regression for fair comparison"
-          - href: S1_T07_EstimationPrediction/index.qmd
-            text: "07 · Estimation vs prediction"
-          - href: S1_T08_ClinicalDecisionMaking/index.qmd
-            text: "08 · Clinical decision making"
-      - section: "Semester 2 · How do we trust evidence?"
-        contents:
-          - href: S2_T09_AskingClinicalQuestions/index.qmd
-            text: "09 · Asking clinical questions"
-          - href: S2_T10_FindingEvidence/index.qmd
-            text: "10 · Finding the right evidence"
-          - href: S2_T11_StrengthOfEvidence/index.qmd
-            text: "11 · The strength of evidence"
-          - href: S2_T12_DistortedEvidence/index.qmd
-            text: "12 · How evidence gets distorted"
-          - href: S2_T13_BeingMisled/index.qmd
-            text: "13 · Are we being misled?"
-          - href: S2_T14_SystematicJudgement/index.qmd
-            text: "14 · Systematic judgement"
-          - href: S2_T15_ResultsMeaning/index.qmd
-            text: "15 · What do the results mean?"
-          - href: S2_T16_UsingEvidence/index.qmd
-            text: "16 · How do I use evidence?"
       - section: "R Toolkit · Cross-semester reference"
         contents:
           - href: R_Toolkit/index.qmd
