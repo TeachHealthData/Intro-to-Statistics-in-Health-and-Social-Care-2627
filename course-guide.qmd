@@ -1,114 +1,73 @@
 ---
 title: "How to use this course notebook"
 description: "The structure, learning outcomes, and a practical weekly workflow."
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
-This site is a **living REBM playbook**, not a replacement for discussion, code-alongs, or tutorial work. The topic pages are a theory reference; the separate R Toolkit supports practical analysis that you complete and retain in Noteable.
+#### **Course Outline**
 
-## Three ways to use the playbook
+Welcome to the **living Introduction to Statistics in Health and Social Care playbook**.
+This playbook is designed to interlace with the content on the Learn pages and follow the same weekly structure (chapters) and topics within weeks (sections).
 
-| When | Use the page to | A useful action |
-|---|---|---|
-| Before teaching | Orient yourself to the clinical question and vocabulary | Read “at a glance” and the learning outcomes |
-| During the week | Connect theory, the case study, and practical work | Annotate the worked reasoning, then use the R Toolkit beside Noteable |
-| After teaching | Consolidate and practise retrieval | Complete the self-check and lab-book prompts without looking back |
-| During assessment | Check principles and reporting structure | Use templates as prompts, then write in your own words for your own analysis |
+This course serves not only as an introduction to the statistical theory side, but importantly how to implement this in a data-science context.
+To that extent, you should ensure you are ready to implement all concepts in R.
+Throughout, you will find model code (grey boxes), such as the block below.
+The below ensures you have all the relevant packages for this course installed and it is recommended that you run it to avoid later issues.
 
-## The four-part weekly pattern
+```{r}
+# Install the tidyverse package, which includes dplyr, ggplot2, and other useful packages
+install.packages("tidyverse")
 
-1. **Meet the clinical decision.** Identify the patients, options, outcomes, and why the decision is difficult.
-2. **Build the conceptual tools.** Learn enough statistics and evidence-based medicine to reason about the problem.
-3. **Apply the ideas in R.** Use the R Toolkit to support the code-along and your work in Noteable.
-4. **Practise and reflect.** Modify the analysis in the lab and write what the result means clinically.
+# Load the tidyverse package
+library(tidyverse)
+```
+
+The ‘tidyverse‘ package is a collection of R packages that includes:
+
+-   dplyr: For data manipulation.
+-   ggplot2: For data visualisation.
+-   readr: For reading data.
+-   purrr: For functional programming.
+-   tibble: For creating tidy data frames.
+-   stringr: For string manipulation.
+-   forcats: For working with factors.
+
+Throughout you will also see boxes which are in yellow.
+Similarly these are also R code, except they follow content which is analogous to that presented in weekly slides, or in the self-guided lab or code-along.
+This to help you see how the content all pieces together.
+An example of a yellow code block is presented below:
+
+::: analogous code
+<details>
+
+```{r}
+# Calculating Z-scores for the "pain_score" variable in the licorice_gargle dataset
+
+licorice_gargle <- licorice_gargle %>%
+mutate(z_score_pain = (pain_score - mean(pain_score, na.rm = TRUE)) /
+sd(pain_score, na.rm = TRUE))
+
+# Print the updated data with Z-scores
+print(licorice_gargle)
+```
+
+</details>
+:::
 
 ## Course learning outcomes
 
-By the end of the course, you should be able to:
+On successful completion of this course, you should be able to:
 
-1. Describe and summarise clinical data using appropriate statistical and graphical methods.
-2. Analyse and interpret relationships in clinical data, including group comparisons and regression.
-3. Critically evaluate clinical research evidence in the context of bias, uncertainty, and study design.
-4. Apply statistical and research evidence to inform and justify clinical decision-making.
-5. Work collaboratively and reflect on how evidence is used to inform clinical decisions.
+1.Demonstrate a critical understanding of the fundamental concepts of statistics.
+2.Apply basic statistical techniques using the statistical software R to solve simple problems from health, social and care settings.
+3.Analyse and interpret data from health and social care, using appropriate statistical tests 4.Demonstrate the ability to effectively communicate basic statistical techniques with peers and a wide range of audiences within the health and social care sector.
 
-## A note-taking pattern that works
+## Course arrangements
 
-On each topic page, keep four questions in view:
+Consult the course area on Learn for current timetables, assessment information and announcements.
 
-- **Question:** What clinical uncertainty are we trying to reduce?
-- **Method:** What does the method calculate, compare, or assume?
-- **Interpretation:** What can we say in plain clinical language?
-- **Limits:** What would make that interpretation misleading?
+## Using generative AI
 
-::: {.callout-tip}
-## Do not collect numbers without meaning
-
-Every result in your lab book should have a sentence beside it explaining the population, groups, outcome, time period, uncertainty, and the decision it could inform.
-:::
-
-## How each completed topic page is organised
-
-1. **Clinical question:** the decision or uncertainty that gives the method a purpose.
-2. **Learning outcomes:** what you should be able to explain or do.
-3. **At a glance:** a compact map of concepts, outputs, and cautions.
-4. **Theory notes:** the substantive conceptual sequence from the topic slides.
-5. **Worked reasoning:** a clinical example showing how to move from evidence to interpretation.
-6. **Reporting template:** a scaffold for complete sentences, not text to copy mechanically.
-7. **Common traps:** plausible but unsafe interpretations to recognise.
-8. **Self-check:** short retrieval questions with expandable answers.
-9. **Lab-book prompts and next connection:** reflection and the link to the wider course.
-
-## The REBM reasoning loop
-
-::: {.reasoning-loop}
-**Question → Data → Description → Method → Estimate → Uncertainty → Bias and assumptions → Clinical meaning → Decision → Documentation**
-:::
-
-The loop is deliberately longer than “choose a test and read the p-value”. You may need to move backwards: an implausible result can reveal a coding problem; a violated assumption can change the method; a patient priority can change which outcome matters.
-
-## How to read statistical output
-
-Use the same sequence whenever possible:
-
-1. Confirm the analysed population and number of observations.
-2. Check the outcome, exposure, groups, reference categories, units, and time horizon.
-3. Find the effect estimate or prediction—not only the test statistic.
-4. Read the confidence interval or other uncertainty measure.
-5. Check assumptions, diagnostics, missing-data handling, and sensitivity analyses.
-6. Translate the result into one plain clinical sentence.
-7. State what the analysis cannot establish.
-
-## How to write for the laboratory book
-
-For each analysis, preserve five layers:
-
-- **Purpose:** the question and why it matters.
-- **Provenance:** data source, eligibility criteria, variables, and any exclusions.
-- **Process:** visible code and justified analytical choices.
-- **Product:** tables, figures, estimates, intervals, and diagnostics.
-- **Interpretation:** clinical meaning, limitations, and the next decision or question.
-
-::: {.callout-warning}
-## A polished output is not a complete analysis
-
-A figure without a question, a p-value without an estimate, a model without diagnostics, or a prediction without a decision context is incomplete—even when the code runs perfectly.
-:::
-
-## Why theory and R are separated
-
-The topic pages explain the statistical and clinical reasoning without interrupting it with software instructions. All practical guidance is gathered in the [R Toolkit](R_Toolkit/index.qmd), including a dedicated [Semester 1 analysis pathway](R_Toolkit/assessment-analysis.qmd). Use those pages beside Noteable, where you should write, run, save, and submit your own analysis.
-
-The repository also contains topic datasets, data dictionaries, data-generation scripts, code-along materials, and model solutions. These support teaching and practice; they do not replace the requirement to understand and document your own analytical decisions.
-
-## Using reporting templates responsibly
-
-Templates prevent omissions, but they can also produce empty formulaic writing. Replace every bracketed element with information from the actual study, remove clauses that do not apply, and add the limitation most likely to change interpretation. Never imply that filling the template makes a weak analysis valid.
-
-## When you are stuck
-
-1. Restate the clinical question without statistical jargon.
-2. Identify the outcome type and unit of analysis.
-3. Draw or tabulate the raw relationship.
-4. Find the relevant topic’s at-a-glance table.
-5. Write what you know, what remains uncertain, and which assumption is blocking progress.
-6. Bring that specific uncertainty to the tutorial or teaching team.
+Read the Gen AI guidance for advice on supporting your learning.
