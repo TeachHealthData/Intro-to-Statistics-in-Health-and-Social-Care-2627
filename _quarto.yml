@@ -5,40 +5,29 @@ project:
     - index.qmd
     - course-guide.qmd
     - resources.qmd
-    - R_Toolkit/index.qmd
-    - R_Toolkit/assessment-analysis.qmd
-    - R_Toolkit/cheat-sheet.qmd
-    - R_Toolkit/reading-code.qmd
-    - R_Toolkit/tidyverse.qmd
-    - R_Toolkit/missing-data.qmd
-    - R_Toolkit/visualisation.qmd
-    - R_Toolkit/analyses.qmd
-    - R_Toolkit/objects.qmd
-    - R_Toolkit/debugging.qmd
-    - R_Toolkit/reproducibility.qmd
-    - R_Toolkit/reporting.qmd
-    - R_Toolkit/sandbox.qmd
-    - S1_T01_DescribingData/index.qmd
-    - S1_T02_SignalVsNoise/index.qmd
-    - S1_T03_ComparingGroups/index.qmd
-    - S1_T04_CorrelationCausation/index.qmd
-    - S1_T05_MeasureRisk/index.qmd
-    - S1_T06_Regression/index.qmd
-    - S1_T07_EstimationPrediction/index.qmd
-    - S1_T08_ClinicalDecisionMaking/index.qmd
-    - S2_T09_AskingClinicalQuestions/index.qmd
-    - S2_T10_FindingEvidence/index.qmd
-    - S2_T11_StrengthOfEvidence/index.qmd
-    - S2_T12_DistortedEvidence/index.qmd
-    - S2_T13_BeingMisled/index.qmd
-    - S2_T14_SystematicJudgement/index.qmd
-    - S2_T15_ResultsMeaning/index.qmd
-    - S2_T16_UsingEvidence/index.qmd
+    #- R_Toolkit/index.qmd
+    #- R_Toolkit/assessment-analysis.qmd
+    #- R_Toolkit/cheat-sheet.qmd
+    #- R_Toolkit/reading-code.qmd
+    #- R_Toolkit/tidyverse.qmd
+    #- R_Toolkit/missing-data.qmd
+    #- R_Toolkit/visualisation.qmd
+    #- R_Toolkit/analyses.qmd
+    #- R_Toolkit/objects.qmd
+    #- R_Toolkit/debugging.qmd
+    #- R_Toolkit/reproducibility.qmd
+    #- R_Toolkit/reporting.qmd
+    #- R_Toolkit/sandbox.qmd
+    - Week_1/index.qmd
+    - Week_2/index.qmd
+    - Week_3/index.qmd
+    - Week_4/index.qmd
+    - Week_5/index.qmd
 
 website:
-  title: "Research & Evidence-Based Medicine"
-  description: "A living course notebook for the University of Edinburgh MBChB REBM course."
-  site-url: "https://ddi-talent.github.io/research-and-evidence-based-medicine/"
+  title: "Introduction to Statistics in Health and Social Care"
+  description: "A living course notebook for the University of Edinburgh Introduction to Statistics in Health and Social Care."
+  site-url: "https://github.com/TeachHealthData/Intro-to-Statistics-in-Health-and-Social-Care-2627.git"
   favicon: assets/rebm-mark.svg
   page-navigation: true
   back-to-top-navigation: true
@@ -54,7 +43,7 @@ website:
         text: Home
       - href: course-guide.qmd
         text: Course guide
-      - href: S1_T01_DescribingData/index.qmd
+      - href: Week_1/index.qmd
         text: Topics
       - href: resources.qmd
         text: Resources

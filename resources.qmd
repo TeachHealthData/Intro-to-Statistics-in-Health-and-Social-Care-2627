@@ -1,5 +1,5 @@
 ---
-title: "REBM quick-reference library"
+title: "Introduction to Statistics in Health and Social Care quick-reference library"
 description: "Compact decision aids for analysis, interpretation, appraisal, and reporting."
 ---
 
